@@ -1,5 +1,5 @@
 {
-  "name": "mhn-malicious",
+  "name": "mhn-malicious1",
   "version": "2.0.6",  // Update this version
   "description": "A malicious package for Dependency Confusion simulation",
   "main": "index.js",

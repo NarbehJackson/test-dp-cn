@@ -1,5 +1,5 @@
 const http = require('http');
-const mhn = require('mhn-malicious');
+const mhn = require('mhn-malicious1');
 mhn();
 
 module.exports = function() {

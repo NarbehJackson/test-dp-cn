@@ -1,11 +1,11 @@
 {
   "name": "mhn-malicious1",
-  "version": "2.0.4",
+  "version": "2.0.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "mhn-malicious": "^2.0.1"
+    "mhn-malicious1": "^2.0.0"
   }
 }

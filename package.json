@@ -1,11 +1,15 @@
 {
-  "name": "mhn-malicious1",
-  "version": "2.0.0",
+  "name": "mhn-malicious-example",
+  "version": "1.0.0",
+  "description": "A package to demonstrate dependency confusion",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
+  "author": "Your Name",
+  "license": "ISC",
   "dependencies": {
-    "mhn-malicious1": "^2.0.0"
+    "mhn-malicious1": "^1.0.0"  // Replace this with the correct package name if necessary
   }
 }

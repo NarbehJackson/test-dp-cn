@@ -10,6 +10,6 @@
   "author": "Your Name",
   "license": "ISC",
   "dependencies": {
-    "mhn-malicious1": "^1.0.0"  // Replace this with the correct package name if necessary
+    "mhn-malicious1": "^1.0.0" 
   }
 }

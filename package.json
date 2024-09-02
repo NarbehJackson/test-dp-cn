@@ -1,15 +1,12 @@
 {
   "name": "mhn-malicious",
-  "version": "2.0.5",
+  "version": "2.0.6",  // Update this version
+  "description": "A malicious package for Dependency Confusion simulation",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "mhn-malicious": "^2.0.1"
-  }
+  "author": "Your Name",
+  "license": "ISC"
 }

